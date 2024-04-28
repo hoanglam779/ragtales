@@ -228,8 +228,8 @@ if __name__ == '__main__':
     elif 'BELLE' in modelname:
         model = BELLE(plm = args.plm)
     elif 'gemini' in modelname:
-        model = GeminiPro1Model(plm = args.plm)
-    
+        # model = GeminiPro1Model(plm = args.plm)
+        model = GeminiPro1Model(api_key=args.api_key)
 
 
     filename = f'{resultpath}/prediction_{args.dataset}_{modelname}_temp{temperature}_noise{noise_rate}_passage{passage_num}_correct{args.correct_rate}.json'

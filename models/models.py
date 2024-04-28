@@ -230,8 +230,8 @@ class OpenAIAPIModel():
 import google.generativeai as genai
 import google.ai.generativelanguage as glm
 class GeminiPro1Model():
-    def __init__(self,API_KEY) -> None:
-        genai.configure(api_key=API_KEY)
+    def __init__(self,api_key) -> None:
+        genai.configure(api_key=api_key)
 
     def generate(self, text: str, temperature=0.7, system="", top_p=None,max_new_tokens=256):
         gen_config = genai.GenerationConfig(
